@@ -1,11 +1,13 @@
 # zsh-shell-autocomplete
-A Simple ZSH Plugin, AutoComplete File Path, like Vim Plugin `ctrlp`
+VSCode的侧边栏一直使用的不是很顺手，看到使用Vim的小伙伴天秀般操作，遂觉得应该给VSCode也加点料，就有了这个小玩意儿。
+> A Simple ZSH Plugin, AutoComplete File Path, like Vim Plugin `ctrlp`
+<br>
 
+**Github仓库地址**：[zsh-shell-autocomplete](https://github.com/onvno/zsh-shell-autocomplete)
 
 
 #### 基本说明
-
-* 类似vim直接在编辑器中快速查找文件打开文件，如`ctrlp`
+* 无需tab,输入即可自动联想（类似vim直接在编辑器中快速查找文件打开文件，如`ctrlp`）
 * 因vscode编辑器自带终端，能够快速切换打开shell，遂根据需求，基于`incr-0.2`完成此插件。无需在vscode侧边栏滚来滚去查找\打开文件。
 
 
@@ -18,14 +20,23 @@ A Simple ZSH Plugin, AutoComplete File Path, like Vim Plugin `ctrlp`
 
 
 #### 功能演示
+* 快速打开文件
+```
+$ code your/file/path
+```
+![](./file.gif)
 
-![](./screen.gif)
+* 快速打开文件夹
+```
+$ code your/folder/path
+```
+![](./folder.gif)
 
 
 
-#### 使用说明
+#### 安装使用说明
 
-1. 命令行使用`code`快速开启vscode:
+1. 如何命令行使用`code`快速开启vscode:
 
    ```
    $ vi ~/.zshrc
@@ -59,10 +70,10 @@ A Simple ZSH Plugin, AutoComplete File Path, like Vim Plugin `ctrlp`
 
 ####  参考
 
-* [incr-0.2](http://mimosa-pudica.net/zsh-incremental.html)
+* [incr-0.2](http://mimosa-pudica.net/zsh-incremental.html)：功能强大，但无法收放自如，插件在此shell文件基础上更改
 
 
 
 #### TODO
 
-- 可以支持sublime & webstorm快速打开
+- 后续可以支持sublime & webstorm快速打开
