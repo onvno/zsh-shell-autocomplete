@@ -1,5 +1,7 @@
-# Incremental completion for zsh
-# by y.fujii <y-fujii at mimosa-pudica.net>, public domain
+# zsh-shell-autocomplete for vscode
+# GitHub : https://github.com/onvno/zsh-shell-autocomplete
+# Email  : leewei2020@gmail.com
+# Author : onvno 
 
 
 autoload -U compinit
@@ -91,23 +93,22 @@ function self-insert-incr
 	correct-prediction
 	remove-prediction
 
-	if zle .self-insert; then
-		if [ "${BUFFER:0:5}" == "code " ]; then
+	if { zle .self-insert } {
+		if [[ "${BUFFER:0:3}" == "cd " ]] || [[ "${BUFFER:0:4}" == "cat " ]] || [[ "${BUFFER:0:5}" == "code " ]] {
 			show-prediction
-		fi
-	fi
+		}
+	}
 }
 
 function backward-delete-char-incr
 {
 	correct-prediction
 	remove-prediction
-	if zle backward-delete-char; then
-		if (( CURSOR > 4 )); then
-			# echo "\n~~${BUFFER}~~${CURSOR}~~\n"
+	if { zle backward-delete-char } {
+		if [[ "${BUFFER:0:3}" == "cd " ]] || [[ "${BUFFER:0:4}" == "cat " ]] || [[ "${BUFFER:0:5}" == "code " ]] {
 			show-prediction
-		else
+		} else {
 			remove-prediction
-		fi
-	fi
+		}
+	}
 }

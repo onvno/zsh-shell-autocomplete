@@ -32,7 +32,14 @@ $ code your/folder/path
 ```
 ![](./folder.gif)
 
+* 其他autocomplete命令支持
 
+  ```
+  $ cd
+  $ cat
+  ```
+
+  
 
 #### 安装使用说明
 
